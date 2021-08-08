@@ -1,0 +1,31 @@
+<%- include ("./partials/header")  %>
+
+    <div class="container">
+
+
+
+        <h1 style="text-align: center; font-family: 'Aclonica', sans-serif;" class=" text-info mt-3 mb-3"><%= camp.name %></h1>
+        <div style="text-align: center;"><img src="<%= camp.img_url %>" class=" shadow rounded mb-4"style=" width: 45%; height:300px; object-fit: cover; "></div>
+        
+        <div class="" style="margin-left:150px ;">
+
+                                                 <p style="font-family: 'Playball', cursive; font-size: 1.3rem;"><%= camp.description %></p>
+
+                                 <a href="/campgrounds/<%= camp._id %>/comment/new" class="btn btn-sm btn-outline-danger mb-3" role="button"> Add a new comment </a>
+
+        <div>
+
+                                <% camp.comment.forEach( function(data) {%>
+                            
+                                    <div style="font-family: 'Yanone Kaffeesatz', sans-serif;"><strong><%= data.author %></strong></div>
+                                    <div class="mb-3" style="font-family: 'Gloria Hallelujah', cursive;"><%= data.text %></div>
+                                <% }) %>
+
+        </div>
+
+        </div
+    
+    
+    </div>    
+        
+ <%- include ("./partials/footer")  %>

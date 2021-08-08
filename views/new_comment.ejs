@@ -1,0 +1,29 @@
+<%- include ("./partials/header")  %>
+
+    <div class="container  " style="width: 38%; margin-top: 100px;">
+
+
+      <h2 style="text-align: center;" class="mb-3 text-info">Add Comment</h2>
+                    <form method="POST" action="/campgrounds/<%= id._id %>/comment">
+
+                              <div class="form-group mb-1">
+                                          <label  class="" for="a">Your Name</label>
+                                          <input name="comment[author]" type="text" class="form-control" id="a">
+                              </div>
+
+                              <div class="form-group mb-3">
+                                          <label for="b" class="">Type your comment</label>
+                                          <input name="comment[text]" type="text" class="form-control" id="b">
+                              </div>
+
+                              <button type="submit" class="btn btn-dark btn-block">Submit</button>
+
+                    </form>
+    </div>
+
+
+
+
+    <%- include ("./partials/footer")  %>
+
+

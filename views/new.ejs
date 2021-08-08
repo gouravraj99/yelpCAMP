@@ -1,0 +1,40 @@
+
+<%- include ("./partials/header")  %>
+
+
+<div class="container  " style="width: 38%; margin-top: 100px;">
+
+
+      <h2 style="text-align: center;" class="mb-3 text-info">Add new Campground</h2>
+                  <form method="POST" action="/campgrounds">
+                                <div class="form-group mb-1">
+                                        <label  class="" for="a">Camp Name</label>
+                                        <input name="name" type="text" class="form-control" id="a" >
+                                </div>
+
+                                <div class="form-group mb-2">
+                                        <label for="b" class="">Image URL</label>
+                                        <input name="url" type="text" class="form-control" id="b">
+                                        <small id="emailHelp" class="form-text text-muted">Paste the image url here </small>
+
+                                </div>
+
+                                <div class="form-group mb-1">
+                                        <label for="c" class="">Description</label>
+                                        <input name="description" type="text" class="form-control" id="c">
+                                </div>
+
+                                <div style="text-align: center;"><button type="submit" class="mt-2 btn btn-dark px-5" >Submit</button></div>
+
+                  </form>
+</div>
+
+
+    <%- include ("./partials/footer")  %>
+
+
+
+
+
+    </body>
+</html>
